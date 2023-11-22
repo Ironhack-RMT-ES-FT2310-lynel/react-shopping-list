@@ -1,4 +1,9 @@
+// imports de hooks
 import { useState } from "react"
+
+// imports de CSS
+import Button from "react-bootstrap/Button"
+import Form from 'react-bootstrap/Form';
 
 function AddForm(props) {
 
@@ -43,24 +48,24 @@ function AddForm(props) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit}>
 
       <h3>Formulario de crear</h3>
 
-      <label htmlFor="name">Nombre:</label>
-      <input type="text" name="name" onChange={handleNameChange} value={nameValue}/>
+      <Form.Label htmlFor="name">Nombre:</Form.Label>
+      <Form.Control type="text" name="name" onChange={handleNameChange} value={nameValue}/>
 
       <br />
 
-      <label htmlFor="price">Precio:</label>
-      <input type="number" name="price" onChange={handlePriceChange} value={priceValue}/>
+      <Form.Label htmlFor="price">Precio:</Form.Label>
+      <Form.Control type="number" name="price" onChange={handlePriceChange} value={priceValue}/>
 
       <br />
 
-      <button>Agregar</button>
+      <Button type="submit">Agregar</Button>
       
 
-    </form>
+    </Form>
   )
 }
 
